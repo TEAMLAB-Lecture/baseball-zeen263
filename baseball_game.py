@@ -82,7 +82,7 @@ def is_duplicated_number(three_digit):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
-    dic = {ch:True for ch in three_digit}
+    dic = {ch:True for ch in str(three_digit)}
     result = len(dic) != 3
 
     return result
