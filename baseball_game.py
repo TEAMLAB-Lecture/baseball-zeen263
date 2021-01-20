@@ -113,6 +113,9 @@ def is_validated_number(user_input_number):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
+    if user_input_number == '0':
+        return True
+
     cond_1 = is_digit(user_input_number)
     cond_2 = is_between_100_and_999(user_input_number)
     cond_3 = not is_duplicated_number(user_input_number)
@@ -273,14 +276,14 @@ def main():
     # ===Modify codes below=============
     while True:
         user_input = input('Input guess number : ')
-        if user_input == '0': break
-
         is_validate = is_validated_number(user_input)
 
         while not is_validate:
             print(error_message)
             user_input = input('Input guess number : ')
             is_validate = is_validated_number(user_input)
+
+        if user_input == '0': break
 
         strike, ball = get_strikes_or_ball(user_input,random_number)
         print('Strikes :', strike, 'Balls :', ball)
