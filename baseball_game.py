@@ -253,7 +253,7 @@ def is_no(one_more_input):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
     user_input = one_more_input.lower()
-    no = ['no', 'n']
+    no = ['no', 'n', '0']
 
     if user_input in no:
         result = True
